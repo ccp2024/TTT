@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Countdown to 15:00 AEST on May 15, 2024</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #countdown-container {
+    background-color: #333333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  #countdown {
+    font-size: 24px;
+  }
+</style>
+</head>
+<body>
+
+<div id="countdown-container">
+  <h1>TimeToTakeoff</h1>
+  <div id="countdown"></div>
+</div>
+
+<script>
+// Function to calculate the time remaining until 15:00 on May 15, 2024, AEST
+function calculateCountdown() {
+  var now = new Date();
+  var eventDate = new Date('2024-05-15T05:00:00Z'); // 15:00 AEST on May 15, 2024
+  var timeRemaining = eventDate - now;
+
+  var days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);
+  var minutes = Math.floor((timeRemaining / (1000 * 60)) % 60);
+  var seconds = Math.floor((timeRemaining / 1000) % 60);
+
+  return {
+    total: timeRemaining,
+    days: days,
+    hours: hours,
+    minutes: minutes,
+    seconds: seconds
+  };
+}
+
+// Function to display the countdown
+function displayCountdown() {
+  var countdown = calculateCountdown();
+  var countdownElement = document.getElementById("countdown");
+  countdownElement.innerHTML = countdown.days + "d " + countdown.hours + "h " + countdown.minutes + "m " + countdown.seconds + "s ";
+}
+
+// Update the countdown every second
+setInterval(displayCountdown, 1000);
+
+// Initial call to display the countdown
+displayCountdown();
+</script>
+
+</body>
+</html>

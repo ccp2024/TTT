@@ -32,19 +32,15 @@
 
 <div id="countdown-container">
   <h1>GoodNews</h1>
-  <h2>Countdown to 18:30 AEST</h2>
+  <h2>Countdown to 18:30 AEST on May 15, 2024</h2>
   <div id="countdown"></div>
 </div>
 
 <script>
-// Function to calculate the time remaining until 18:30 AEST
+// Function to calculate the time remaining until 18:30 on May 15, 2024, AEST
 function calculateCountdown() {
   var now = new Date();
-  var eventDate = new Date();
-  eventDate.setUTCHours(8); // 18:30 AEST is 08:30 UTC
-  eventDate.setUTCMinutes(30);
-  eventDate.setUTCSeconds(0);
-
+  var eventDate = new Date('2024-05-15T08:30:00Z'); // 18:30 AEST on May 15, 2024
   var timeRemaining = eventDate - now;
 
   var hours = Math.floor((timeRemaining / (1000 * 60 * 60)) % 24);

@@ -22,7 +22,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
   .countdown {
     font-size: 24px;
@@ -37,13 +37,13 @@
 </div>
 
 <div class="countdown-container">
-  <h1>GoodNews</h1>
-  <div id="goodnews-countdown" class="countdown"></div>
+  <h1>TimeToTakeoff</h1>
+  <div id="takeoff-countdown" class="countdown"></div>
 </div>
 
 <div class="countdown-container">
-  <h1>TimeToTakeoff</h1>
-  <div id="takeoff-countdown" class="countdown"></div>
+  <h1>GoodNews</h1>
+  <div id="goodnews-countdown" class="countdown"></div>
 </div>
 
 <script>
@@ -79,16 +79,16 @@ setInterval(function() {
   displayCountdown(checkinDate, 'checkin-countdown');
 }, 1000);
 
-// Update the countdown every second for GoodNews
-var goodNewsDate = new Date('2024-05-15T08:30:00Z'); // 08:30 AEST on May 15, 2024
-setInterval(function() {
-  displayCountdown(goodNewsDate, 'goodnews-countdown');
-}, 1000);
-
 // Update the countdown every second for TimeToTakeoff
 var takeoffDate = new Date('2024-05-15T05:00:00Z'); // 15:00 AEST on May 15, 2024
 setInterval(function() {
   displayCountdown(takeoffDate, 'takeoff-countdown');
+}, 1000);
+
+// Update the countdown every second for GoodNews
+var goodNewsDate = new Date('2024-05-15T08:30:00Z'); // 08:30 AEST on May 15, 2024
+setInterval(function() {
+  displayCountdown(goodNewsDate, 'goodnews-countdown');
 }, 1000);
 </script>
 

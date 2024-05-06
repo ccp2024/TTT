@@ -13,8 +13,9 @@
     background-color: black;
     color: white;
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Adjusted to stack containers vertically */
     align-items: center;
+    justify-content: center;
     height: 100vh;
   }
   .countdown-container {
@@ -32,17 +33,17 @@
 <body>
 
 <div class="countdown-container">
-  <h1>Time To Check-In</h1>
+  <h1>TimeToCheckIn</h1>
   <div id="checkin-countdown" class="countdown"></div>
 </div>
 
 <div class="countdown-container">
-  <h1>Time To Take Off</h1>
+  <h1>TimeToTakeoff</h1>
   <div id="takeoff-countdown" class="countdown"></div>
 </div>
 
 <div class="countdown-container">
-  <h1>Good News !</h1>
+  <h1>GoodNews</h1>
   <div id="goodnews-countdown" class="countdown"></div>
 </div>
 
